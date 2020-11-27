@@ -6,12 +6,12 @@ void sort(int *v, int *c, int i, int f);
 void merge(int *v, int *c, int i, int m, int f);
 
 int main (void) {
-  int i;
-  int v[8] = { -1, 7, -3, 11, 4, -2, 4, 8 };
+  int i, n = 1000;
+  int v[n];
 
-  mergesort(v, 8);
+  mergesort(v, n);
 
-  for (i = 0; i < 8; i++) printf("%d ", v[i]);
+  
 
   putchar('\n');
 
@@ -23,7 +23,18 @@ int main (void) {
 */
 void mergesort(int *v, int n) {
   int *c = malloc(sizeof(int) * n);
+  FILE *arquivo;
+  int i=0;
+  arquivo = fopen("1Entrada_mil.txt","r");
+  while (!feof(arquivo)) {
+    fscanf(arquivo,"%d\n", &v[i]);
+    i++;
+  }
+  
   sort(v, c, 0, n - 1);
+
+  
+  
   free(c);
 }
 

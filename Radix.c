@@ -1,5 +1,6 @@
 #include <stdio.h>
-#define max 10
+#include <stdlib.h>
+
 
 void radixsort(int *vet, int n) {
 	int i, exp = 1, m = 0, bucket[n], temp[n];
@@ -31,11 +32,19 @@ void radixsort(int *vet, int n) {
 }
 
 int main() {
-	int vetor[max] = {5,2,7,8,10,6,1,4,9,3};
+	int n = 1000;
+	int *vetor;
 	int i;
-	radixsort(vetor,max);
-	for (i = 0; i < max; i++) {
-		printf("%d ", vetor[i]);
-	}
+	FILE *arquivo;
+    int i=0;
+    arquivo = fopen("1Entrada_mil.txt","r");
+    while (!feof(arquivo)) {
+      fscanf(arquivo,"%d\n", &vetor[i]);
+      i++;
+   }
+	radixsort(vetor,n);
+	
+
+	fclose(arquivo);
 	return(0);
 }
