@@ -71,11 +71,11 @@ void mergeSort(int arr[], int l, int r)
 }
 
 int main() {
-	int n = 1000;
+	int n = 10000;
 	int *vetor;
 	FILE *arquivo;
     int i=0;
-    arquivo = fopen("1Entrada_mil.txt","r");
+    arquivo = fopen("1Entrada_10mil.txt","r");
 	vetor = (int *)malloc(n*sizeof(int));
     while (!feof(arquivo)) {
       fscanf(arquivo,"%d\n", &vetor[i]);

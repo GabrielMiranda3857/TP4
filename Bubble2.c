@@ -18,11 +18,11 @@ void Bubble_sort(int *vetor, int n){
  
 int main(){
  
-    int i=0, aux, n = 1000;
+    int i=0, aux, n = 10000;
     int *vetor;
     int numero;
     FILE *arquivo;
-    arquivo = fopen("1Entrada_mil.txt","r");
+    arquivo = fopen("1Entrada_10mil.txt","r");
     
     vetor = (int *)malloc(n*sizeof(int));
     printf("iniciou...");
