@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+// QuickSort entrada com vetor 10.000///
+///////////////////////////////////////
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -34,7 +38,7 @@ int main(){
    int n = 10000, i=0;
    int *vetor;
    FILE *arquivo;
-   arquivo = fopen("1Entrada_10mil.txt","r");
+   arquivo = fopen("Entrada_DezMil.txt","r");
    vetor = (int *)malloc(n*sizeof(int));
    
    while (!feof(arquivo)){

@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+// RadixSort entrada com vetor 1.000////
+///////////////////////////////////////
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -36,7 +40,7 @@ int main() {
 	int *vetor;
 	FILE *arquivo;
     int i=0;
-    arquivo = fopen("1Entrada_mil.txt","r");
+    arquivo = fopen("Entrada_Mil.txt","r");
 	vetor = (int *)malloc(n*sizeof(int));
     while (!feof(arquivo)) {
       fscanf(arquivo,"%d\n", &vetor[i]);

@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////
-// Fibonacci Otimizado entrada com vetor 10.000///
+// Fibonacci Otimizado entrada com vetor 1.000////
 /////////////////////////////////////////////////
 
 #include <stdio.h>
@@ -17,7 +17,7 @@ int main(void){
 
      int n;
      FILE *arquivo;
-     arquivo = fopen("Entrada_DezMil.txt","r");
+     arquivo = fopen("Entrada_Mil.txt","r");
 
      clock_t Ticks[2];
      Ticks[0] = clock();

@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+// BubbleSort entrada com vetor 10.000//
+///////////////////////////////////////
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -22,7 +26,7 @@ int main(){
     int *vetor;
     int numero;
     FILE *arquivo;
-    arquivo = fopen("1Entrada_10mil.txt","r");
+    arquivo = fopen("Entrada_DezMil.txt","r");
     
     vetor = (int *)malloc(n*sizeof(int));
     printf("iniciou...");

@@ -1,5 +1,5 @@
 /////////////////////////////////////////
-// Fibonacci entrada com vetor 1.000////
+// Fibonacci entrada com vetor 10.000///
 ///////////////////////////////////////
 
 #include <stdlib.h>
@@ -23,7 +23,7 @@ int fib(int n){
  int main(void){
      int n;
      FILE *arquivo;
-     arquivo = fopen("Entrada_Mil.txt","r");
+     arquivo = fopen("Entrada_DezMil.txt","r");
 
      clock_t Ticks[2];
      Ticks[0] = clock();
