@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 void merge(int arr[], int l, int m, int r){
 	int i, j, k;
@@ -70,15 +69,8 @@ int main() {
       fscanf(arquivo,"%d\n", &vetor[i]);
       i++;
    }
-   clock_t Ticks[2];
-    Ticks[0] = clock();
 	mergeSort(vetor, 0, n - 1);
-  	Ticks[1] = clock();
 
-   double Tempo = (Ticks[1] - Ticks[0]) * 1000.0 / CLOCKS_PER_SEC;
-
-   printf("ordenação concluida\n");
-   printf("Tempo gasto: %g ms.", Tempo);
    getchar();
 
 	fclose(arquivo);

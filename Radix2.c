@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 void radixsort(int *vet, int n) {
 	int i, exp = 1, m = 0, bucket[n], temp[n];
@@ -46,15 +45,8 @@ int main() {
       fscanf(arquivo,"%d\n", &vetor[i]);
       i++;
    }
-   clock_t Ticks[2];
-    Ticks[0] = clock();
 	radixsort(vetor,n);
-	Ticks[1] = clock();
 
-   double Tempo = (Ticks[1] - Ticks[0]) * 1000.0 / CLOCKS_PER_SEC;
-
-   printf("ordenação concluida\n");
-   printf("Tempo gasto: %g ms.", Tempo);
    getchar();
 
 	fclose(arquivo);

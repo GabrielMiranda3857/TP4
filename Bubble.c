@@ -4,7 +4,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
 
 void Bubble_sort(int *vetor, int n){
   
@@ -29,25 +28,13 @@ int main(){
     arquivo = fopen("Entrada_Mil.txt","r");
     
     vetor = (int *)malloc(n*sizeof(int));
-    printf("iniciou...");
     while (!feof(arquivo)){
     
          fscanf(arquivo,"%d\n",&vetor[i]);
-         if(i==0){
-             printf("%d",vetor[i]);
-         }
          i++;
     }
-    clock_t Ticks[2];
-    Ticks[0] = clock();
     Bubble_sort(vetor, n);
-    printf("fim");
-    Ticks[1] = clock();
 
-   double Tempo = (Ticks[1] - Ticks[0]) * 1000.0 / CLOCKS_PER_SEC;
-
-   printf("ordenação concluida\n");
-   printf("Tempo gasto: %g ms.", Tempo);
    getchar();
     free(vetor);
     fclose(arquivo);
